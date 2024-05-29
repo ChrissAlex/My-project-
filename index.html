@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <script src="js/index.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+  <title>SELLING AND EXPENSES BOOK</title>
+</head>
+<body class="container mt-5">
+  <div class="form-row mb-3">
+    <div class="col">
+      <input type="date" id="dateInput" class="form-control" placeholder="Date">
+    </div>
+    <div class="col">
+      <input type="number" id="sellingInput" class="form-control" placeholder="Selling">
+    </div>
+    <div class="col">
+      <input type="number" id="expensesInput" class="form-control" placeholder="Expenses">
+    </div>
+    <div class="col">
+      <input type="text" id="detailInput" class="form-control" placeholder="Details">
+    </div>
+  </div>
+  <div class="form-row mb-3">
+    <div class="col">
+      <button onclick="addEntry()" class="btn btn-primary">ADD ENTRY</button>
+      <button onclick="clearField()" class="btn btn-warning">CLEAR FIELDS</button>
+      <button onclick="downloadPDF()" class="btn btn-success">DOWNLOAD PDF</button>
+    </div>
+  </div>
+  <table id="bookTable" class="table table-bordered table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th>Details</th>
+        <th>Date</th>
+        <th>Selling</th>
+        <th>Expenses</th>
+        <th>Total</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+  <p id="totalExpenses" class="font-weight-bold">TOTAL EXPENSES: 0</p>
+  
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
